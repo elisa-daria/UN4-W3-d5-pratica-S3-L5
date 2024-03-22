@@ -8,7 +8,9 @@ import java.util.Random;
 @Entity
 @Table(name="elemento_libreria")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@NamedQuery(name = "LibraryElement.getByISBN", query = "SELECT e FROM LibraryElement e WHERE e.codeISBN = :isbn")
+@NamedQuery(name = "getByISBN", query = "SELECT e FROM LibraryElement e WHERE e.codeISBN = :isbn")
+@NamedQuery(name = "getByYear", query = "SELECT e FROM LibraryElement e WHERE e.yearOfPublication = :year")
+@NamedQuery(name = "getByTitle", query = "SELECT e FROM LibraryElement e WHERE e.title LIKE :title")
 public abstract class LibraryElement {
     //attributes
     @Id
