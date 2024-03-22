@@ -1,15 +1,25 @@
 package elisadaria.entities;
 
-import java.time.LocalDate;
-import java.util.Random;
-import java.util.UUID;
 
+import jakarta.persistence.*;
+
+import java.util.Random;
+
+@Entity
+@Table(name="elemento_libreria")
 abstract class LibraryElement {
     //attributes
-    private UUID codeISBN;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "codice_id")
+    private long codeISBN;
     private String title;
+    @Column(name="anno_di_pubblicazione")
     private int yearOfPublication;
+    @Column(name="n_di_pagine")
     private int numberOfPages;
+    @OneToOne
+    private Loan loan;
     //constructors
 
     public LibraryElement() {
@@ -23,7 +33,7 @@ abstract class LibraryElement {
 
     //getters
 
-    public UUID getCodeISBN() {
+    public long getCodeISBN() {
         return codeISBN;
     }
 

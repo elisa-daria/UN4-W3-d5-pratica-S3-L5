@@ -1,7 +1,6 @@
 package elisadaria.dao;
 
 import elisadaria.entities.Loan;
-import elisadaria.entities.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 

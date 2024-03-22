@@ -19,6 +19,8 @@ public class Loan {
     @ManyToOne
     @JoinColumn(name="id_library_card")
     private User user;
+    @OneToOne
+    @JoinColumn(name = "isbn")
     private LibraryElement elementLoaned;
     //constructors
 

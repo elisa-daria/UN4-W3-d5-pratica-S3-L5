@@ -3,6 +3,7 @@ package elisadaria.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -19,7 +20,7 @@ public class User {
     @Column(name="date_of_birth")
     private LocalDate dateOfBirth;
     @OneToMany(mappedBy="user")
-    private Loan loan;
+    private List<Loan> loans;
 
 
     //constructors
