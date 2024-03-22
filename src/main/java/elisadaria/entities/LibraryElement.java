@@ -7,7 +7,8 @@ import java.util.Random;
 
 @Entity
 @Table(name="elemento_libreria")
-abstract class LibraryElement {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public abstract class LibraryElement {
     //attributes
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -58,8 +59,9 @@ abstract class LibraryElement {
     public void setYearOfPublication(int yearOfPublication) {
         this.yearOfPublication = yearOfPublication;
     }
-    Random rdm=new Random();
+
     public void setNumberOfPages(int numberOfPages) {
+        Random rdm=new Random();
         this.numberOfPages = rdm.nextInt(15,879);
     }
 

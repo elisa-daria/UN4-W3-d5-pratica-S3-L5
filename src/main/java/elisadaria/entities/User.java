@@ -33,6 +33,7 @@ public class User {
         this.setSurname(surname);
         this.setDateOfBirth(dateOfBirth);
 
+
     }
     //getters
 
@@ -66,6 +67,7 @@ public class User {
     public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
+
 
     //method
     @Override
