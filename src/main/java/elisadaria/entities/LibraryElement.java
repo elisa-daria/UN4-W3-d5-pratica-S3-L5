@@ -8,6 +8,7 @@ import java.util.Random;
 @Entity
 @Table(name="elemento_libreria")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@NamedQuery(name = "LibraryElement.getByISBN", query = "SELECT e FROM LibraryElement e WHERE e.codeISBN = :isbn")
 public abstract class LibraryElement {
     //attributes
     @Id

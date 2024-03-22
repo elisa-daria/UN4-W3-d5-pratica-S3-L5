@@ -4,13 +4,14 @@ import elisadaria.enums.MagType;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="rivista")
+@Table(name="riviste")
 public class Magazine extends LibraryElement{
     //attributes
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "mag_id")
     private long id;
+    @Enumerated(EnumType.STRING)
     private MagType periodicity;
     //constructors
     public Magazine(){

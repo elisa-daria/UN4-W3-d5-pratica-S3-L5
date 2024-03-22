@@ -2,7 +2,7 @@ package elisadaria;
 
 import com.github.javafaker.Faker;
 import elisadaria.dao.UsersDAO;
-import elisadaria.entities.Loan;
+
 import elisadaria.entities.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
